@@ -1,0 +1,34 @@
+﻿{	"extensionName": "Contrôleur Bluetooth HC06",
+	"sort":0,  
+	"javascriptURL":"js/bluetoothhc.js", // define the path of JavaScript file
+    "firmware":"1.0",  // firmware version 
+    "extensionPort":0, // network port of extension, 0 for serial port
+	"blockSpecs": [ // module defining array
+		[
+			"w",
+			"Bluetooth HC06 : TX : %n RX : %n Nom : %s Code Pin : %n)",
+			"inithc",
+			"7",
+			"6",
+			"BTSlave",
+			"1234",
+			{
+				"setup":"",
+				"inc":"#include \"bluetoothhc.h\"",
+				"def":"BluetoothClassHC bluetoothhc; \n",
+				"work":"bluetoothhc.inithc({0},{1},{2},{3}); \n",
+				"loop":"bluetoothhc.bluetoothLoopHc(); \n"
+			}
+		],
+		["b","data available?","isAvailable",
+		{"setup":"","inc":"","def":"","work":"bluetoothhc.dataLineAvailableHc()","loop":""}],
+		["R","read line","readLine",
+		{"setup":"","inc":"","def":"","work":"bluetoothhc.readDataLineHc()","loop":""}],
+		
+	],
+	"translators":{
+		"fr_FR":{ // Chinese version
+			"Bluetooth controller":"Contrôleur Bluetooth"
+		}
+	}
+}
