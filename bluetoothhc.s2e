@@ -1,9 +1,13 @@
-﻿{	"extensionName": "Contrôleur Bluetooth HC06",
+{	"extensionName": "Contrôleur Bluetooth HC06",
+	"description": "Controler un module bluetooth HC-06",
+	"version": "1.0",
+	"author": "Paul Coiffier (coiffier.paul@gmail.com)",
+	"homepage": "https://github.com/paulcoiffier/mblock_hc06",
 	"sort":0,  
-	"javascriptURL":"js/bluetoothhc.js", // define the path of JavaScript file
-    "firmware":"1.0",  // firmware version 
-    "extensionPort":0, // network port of extension, 0 for serial port
-	"blockSpecs": [ // module defining array
+	"javascriptURL":"js/lcd_shield.js", 
+  "firmware":"1.0",
+  "extensionPort":0,
+	"blockSpecs": [ 
 		[
 			"w",
 			"Bluetooth HC06 : TX : %n RX : %n Nom : %s Code Pin : %n)",
@@ -23,12 +27,9 @@
 		["b","data available?","isAvailable",
 		{"setup":"","inc":"","def":"","work":"bluetoothhc.dataLineAvailableHc()","loop":""}],
 		["R","read line","readLine",
-		{"setup":"","inc":"","def":"","work":"bluetoothhc.readDataLineHc()","loop":""}],
+		{"setup":"","inc":"","def":"","work":"bluetoothhc.readDataLineHc()","loop":""}]
 		
 	],
 	"translators":{
-		"fr_FR":{ // Chinese version
-			"Bluetooth controller":"Contrôleur Bluetooth"
-		}
 	}
 }
