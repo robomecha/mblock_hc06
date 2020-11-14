@@ -1,0 +1,25 @@
+{	"extensionName": "RoboBrain",
+	"description": "Controler un module HC06",
+	"version": "1.0",
+	"author": "Paul Coiffier (coiffier.paul@gmail.com)",
+	"homepage": "https://robomecha.co.kr",
+	"sort":0,
+	"javascriptURL":"js/robobrain.js",
+	"firmware":"1.0",
+	"extensionPort":0,
+	"blockSpecs": [
+
+		[
+			"R",
+			"Attention",
+			"Attention",
+			{
+				"setup":"",
+				"inc":"",
+				"def":"",
+				"work":"mindwave.attention()",
+				"loop":""
+			}
+		]
+	]
+}
